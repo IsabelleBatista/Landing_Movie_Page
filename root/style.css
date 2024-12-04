@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Cordia New';
+    src: url('./Cordia\ New.ttf');
+}
+
+body {
+    width: 90vw;
+    background-color: #0C1721;
+    font-family: 'Cordia New';
+    /* background-color: #111113; */
+    /* background-color: #28293D; */
+}
+::selection {
+    background-color: #28293D;
+    color: #EDF2EB;
+}
+
+header form {
+    padding: 1rem;
+    display: flex;
+    width: 99vw;
+    justify-content: end;
+    background-color: #0F1C29;
+    font-family: 'Cordia New';
+}
+form input {
+    width: 200px;
+    height: 40px;
+    padding: 0 15px;
+    background-color: #142535;
+    border: none;
+    border: 0.5px solid rgb(108, 108, 108);
+    border-radius: 1px;
+    font-size: 20px;
+    font-family: 'Cordia New';
+    color: #EDF2EB;
+    outline: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0C1721;
+    font-family: 'Cordia New';
+    color: #EDF2EB;
+}
+
+.movie {
+    position: relative;
+    width: 280px;
+    margin: 1rem;
+    background-color: #0F1C29;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+}
+.movie img {
+    width: 100%;
+}
+.movie-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 0.5rem;
+    font-family: 'Cordia New';
+    font-size: 25px;
+    letter-spacing: 0.8px;
+}
+.movie-info h3 {
+    margin-top: 0;
+}
+.movie-info span {
+    background-color: #0C1721;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bolder;
+}
+.movie-info span.green {
+    color: rgb(63, 232, 63);
+}
+.movie-info span.orange {
+    color: orange;
+}
+.movie-info span.red {
+    color: rgb(248, 36, 36);
+}
+.movie:active {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.634);
+}
+
+.overview h3 {
+    margin-bottom: 5px;
+    font-family: 'Cordia New';
+    letter-spacing: 1.7px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.overview {
+    position: absolute;
+    max-height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.5rem;
+    background-color: #EDF2EB;
+    font-family: 'Cordia New';
+    color: #0D0D0D;
+    font-size: 19px;
+    line-height: 19px;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+.movie:hover .overview {
+    transform: translateY(0);
+}
